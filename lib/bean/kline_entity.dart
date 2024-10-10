@@ -1,14 +1,8 @@
-/// amount : 118677703.9104968
-/// close : 65274.1
-/// time : "2024-09-27 12:00:00"
-/// high : 65433.7
-/// id : 1727409600
-/// idx : 1727409600
-/// low : 65246.1
-/// open : 65338
-/// vol : 18168817.22
 
-class KlineEntity {
+
+import 'k_entity.dart';
+
+class KlineEntity extends KEntity {
   KlineEntity({
       num? amount, 
       num? close, 
@@ -70,14 +64,14 @@ KlineEntity copyWith({  num? amount,
   vol: vol ?? _vol,
 );
   num? get amount => _amount;
-  num? get close => _close;
+  double get close => _close?.toDouble()??0.0;
   String? get time => _time;
-  num? get high => _high;
+  double get high => _high?.toDouble()??0.0;
   num? get id => _id;
   num? get idx => _idx;
-  num? get low => _low;
-  num? get open => _open;
-  num? get vol => _vol;
+  double get low => _low?.toDouble()??0.0;
+  double get open => _open?.toDouble()??0.0;
+  double get vol => _vol?.toDouble()??0.0;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
