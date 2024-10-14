@@ -67,7 +67,7 @@ KlineEntity copyWith({  num? amount,
   double get close => _close?.toDouble()??0.0;
   String? get time => _time;
   double get high => _high?.toDouble()??0.0;
-  num? get id => _id;
+  int get id => (_id??0).toInt();
   num? get idx => _idx;
   double get low => _low?.toDouble()??0.0;
   double get open => _open?.toDouble()??0.0;
